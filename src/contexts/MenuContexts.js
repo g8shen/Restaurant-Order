@@ -25,10 +25,11 @@ export const MenuProvider = ({ children }) => {
         console.log(items)
     }
 
-    function deleteItem({ id }){
+    function deleteItem( id ){
         setItems(prevItems => {
             return prevItems.filter(items => items.id !== id)
         })
+        console.log(items)
     }
     return (
         <MenuContext.Provider value={{

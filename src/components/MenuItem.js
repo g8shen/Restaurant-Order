@@ -1,6 +1,5 @@
 import { Button, Card, Stack } from "react-bootstrap"
 import { useMenus } from "../contexts/MenuContexts"
-import { useEffect } from "react";
 
 export default function MenuItem({
 name,
