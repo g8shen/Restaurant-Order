@@ -9,7 +9,6 @@ import { useMenus } from "./contexts/MenuContexts"
 function App() {
   const [showOrderModal, setShowOrderModal] = useState(false)
   const { menuItems } = useMenus()
-  var test = 1 
   return (
     <>
     <Container className="my-4">
@@ -22,6 +21,7 @@ function App() {
           {menuItems.map(menuItem => {
             return (
               <MenuItem
+                onClick={() => setShowOrderModal(true)}
                 key = {menuItem.ID}
                 name = {menuItem.name}
                 price = {menuItem.price}

@@ -6,8 +6,11 @@ name,
 price
 }) {
   const { addItem } = useMenus()
+  function consoleLog(){
+    console.log(1)
+  }
   return (
-    <Card>
+    <Card onClick={() => consoleLog()}>
       <Card.Body>
         <Card.Title className="d-flex justify-content-between align-items-baseline mb-3">
           <div className="me-2">{name}</div>
