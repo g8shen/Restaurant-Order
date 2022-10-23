@@ -25,6 +25,7 @@ function App() {
                 key = {menuItem.ID}
                 name = {menuItem.name}
                 price = {menuItem.price}
+                description = {menuItem.description}
               />
             )
           })}

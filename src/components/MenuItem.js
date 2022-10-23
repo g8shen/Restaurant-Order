@@ -2,10 +2,7 @@ import { Button, Card, Stack } from "react-bootstrap"
 import { useMenus } from "../contexts/MenuContexts"
 import { useState } from "react"
 import MenuItemModal from "./MenuItemModal"
-export default function MenuItem({
-name,
-price
-}) {
+export default function MenuItem({name, price, description}) {
   const [showMenuItemModal, setShowMenuItemModal] = useState(false)
   const { addItem } = useMenus()
   return (
@@ -20,7 +17,7 @@ price
         </Card.Title>
       </Card.Body>
     </Card>
-    <MenuItemModal name={name} price={price} show={showMenuItemModal} handleClose={() => setShowMenuItemModal(false)}/>
+    <MenuItemModal name={name} price={price} description={description} show={showMenuItemModal} handleClose={() => setShowMenuItemModal(false)}/>
     </>
   )
 }

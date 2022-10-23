@@ -15,7 +15,7 @@ export default function OrderModal({ show, handleClose }) {
         setTotalPrice(newPrice)
       });
     return (
-        <Modal show={show} onHide={handleClose} >
+        <Modal contentClassName="modal-height" show={show} onHide={handleClose} >
             <Modal.Header closeButton>
                 <Modal.Title>Your Order</Modal.Title>
             </Modal.Header>
