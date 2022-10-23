@@ -1,16 +1,16 @@
 import { Button, Card, Stack } from "react-bootstrap"
 import { useMenus } from "../contexts/MenuContexts"
-
+import { useState } from "react"
+import MenuItemModal from "./MenuItemModal"
 export default function MenuItem({
 name,
 price
 }) {
+  const [showMenuItemModal, setShowMenuItemModal] = useState(false)
   const { addItem } = useMenus()
-  function consoleLog(){
-    console.log(1)
-  }
   return (
-    <Card onClick={() => consoleLog()}>
+    <>
+    <Card onClick={() => setShowMenuItemModal(true)}>
       <Card.Body>
         <Card.Title className="d-flex justify-content-between align-items-baseline mb-3">
           <div className="me-2">{name}</div>
@@ -18,16 +18,9 @@ price
             ${price}
           </div>
         </Card.Title>
-          <Stack direction="horizontal" gap="2" className="mt-4">
-            <Button
-              variant="primary"
-              className="ms-auto"
-              onClick={() => addItem(name, price)}
-              >
-              Add 
-            </Button>
-          </Stack>
       </Card.Body>
     </Card>
+    <MenuItemModal name={name} price={price} show={showMenuItemModal} handleClose={() => setShowMenuItemModal(false)}/>
+    </>
   )
 }
