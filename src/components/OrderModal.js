@@ -22,7 +22,7 @@ export default function OrderModal({ show, handleClose }) {
             <Modal.Body>
                 <div>
                 {items.map(function(orderItem, idx){
-                    return (<li className="mt-4" key={idx}><b>{orderItem.name}</b> ${orderItem.price}<Button style={{position: "absolute", right: 15}} onClick={ () => deleteItem(orderItem.id)}>  <FaTrash /> </Button></li>)
+                    return (<div className="mt-4" key={idx}><b>{orderItem.name}</b> ${orderItem.price}<Button style={{position: "absolute", right: 15}} onClick={ () => deleteItem(orderItem.id)}>  <FaTrash /> </Button></div>)
                 })}
                 </div>
             </Modal.Body>

@@ -1,4 +1,8 @@
-.modal-height {
-    height: 90vh;   /* Occupy the 90% of the screen width */
+.modalHeight {
+    height: 90vh;   
     max-height: 90vh;
-} 
+}
+
+.notBold{
+    font-weight: normal;
+}
