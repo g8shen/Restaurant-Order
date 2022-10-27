@@ -7,6 +7,7 @@ export default function OrderModal({ show, handleClose }) {
     const { items } = useMenus()
     const { deleteItem } = useMenus()
     const [totalPrice, setTotalPrice] = useState(0)
+    const { send } = useMenus()
     useEffect(() => {
         var newPrice = 0
         for(let i=0; i<items.length; i++){
@@ -27,7 +28,7 @@ export default function OrderModal({ show, handleClose }) {
                 </div>
             </Modal.Body>
             <Modal.Footer>
-                Order cost: ${totalPrice} <Button> Send </Button>
+                Order cost: ${totalPrice} <Button onClick={() => send()}> Send </Button>
             </Modal.Footer>
         </Modal>
     )

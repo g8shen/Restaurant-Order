@@ -31,12 +31,17 @@ export const MenuProvider = ({ children }) => {
         })
         console.log(items)
     }
+
+    function send (){
+        setItems([])
+    }
     return (
         <MenuContext.Provider value={{
             items,
             menuItems,
             addItem,
             deleteItem,
+            send
         }}>{children}</MenuContext.Provider>
     )
 }
